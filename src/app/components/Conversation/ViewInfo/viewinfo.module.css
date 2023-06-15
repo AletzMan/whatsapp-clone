@@ -1,0 +1,184 @@
+.view {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 3;
+}
+
+.viewOpen {
+  transform: translateX(0%);
+}
+
+.viewHeader {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  color: var(--nameChat);
+  max-height: 59px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--searchChat);
+  padding: 0 1em;
+}
+
+.viewClose {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 3em;
+  padding: 0.35em 0 0 0;
+}
+
+.viewClose:hover {
+  background-color: #ffffff15;
+}
+
+.resultArea {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0em;
+  overflow: hidden;
+}
+
+.searchText {
+  justify-self: center;
+  color: var(--audioProgressMetadata);
+  font-size: 0.85em;
+  text-align: center;
+  margin: 6em 0 0 0;
+}
+
+.resultSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em 0 0 0;
+  overflow-y: auto;
+  scrollbar-color: #888;
+}
+
+.resultSearch::-webkit-scrollbar {
+  width: 6px; /* Ancho de la scrollbar */
+}
+
+.resultSearch::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarThumb);
+}
+.resultSearch::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
+
+.content {
+  background-color: var(--backgroundDeeper);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #888;
+}
+.content::-webkit-scrollbar {
+  width: 7px; /* Ancho de la scrollbar */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: var(--mediaDropBorder);
+}
+.content::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
+.content::placeholder {
+  color: var(--avatarBorder);
+  opacity: 0.85;
+  padding: 0 0 0 0.2em;
+}
+
+.infoProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 2em;
+  background-color: var(--avatarBackground);
+}
+
+.photoContainer {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 10em;
+  overflow: hidden;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.name {
+  color: var(--nameChat);
+  font-size: 1.8em;
+}
+
+.phone {
+  color: var(--messageChatPreview);
+  font-size: 1.1em;
+}
+
+.attach {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--avatarBackground);
+  margin: 1em 0 0 0;
+  padding: 1em 1.5em;
+}
+
+.attachTitle {
+  color: var(--messageChatPreview);
+}
+
+.attachNumber {
+  color: var(--messageChatPreview);
+}
+
+.config {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--avatarBackground);
+  margin: 1em 0 0 0;
+  padding: 1em 0 1em 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em 2.5em;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--mediaDropBorder);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
+  font-size: 1.1em;
+  color: var(--nameChat);
+}
+
+.textRed {
+  font-size: 1.1em;
+  color: var(--attachmentTypePolls);
+}

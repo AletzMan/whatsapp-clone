@@ -1,0 +1,132 @@
+.dateMessages {
+  position: sticky;
+  top: 0em;
+  background-color: var(--backDate);
+  color: var(--messageChatPreview);
+  font-size: 0.8em;
+  font-weight: 400;
+  width: max-content;
+  min-width: 6em;
+  text-align: center;
+  padding: 0.45em 0.6em 0.6em 0.6em;
+  border-radius: 0.4em;
+  align-self: center;
+  margin: 0.5em 0;
+  z-index: 1;
+}
+
+.messageContainer {
+  display: grid;
+  grid-template-columns: 1fr 4em;
+  padding: 0.6em;
+  position: relative;
+  width: max-content;
+  word-wrap: break-word;
+  max-width: 80%;
+  min-width: 120px;
+  overflow-x: visible;
+}
+
+.messageContainerInner {
+  background-color: var(--searchChat);
+  border-radius: 0 0.5em 0.5em 0.5em;
+  justify-self: flex-start;
+}
+.messageContainerOuter {
+  background-color: var(--backMessagesOutter);
+  border-radius: 0.5em 0 0.5em 0.5em;
+  justify-self: self-end;
+  align-self: flex-end;
+}
+
+.messageContainer:hover > .menu {
+  transform: translateX(0);
+  opacity: 1;
+}
+.messageContainer:hover :nth-child(4) {
+  opacity: 1;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  color: var(--nameChat);
+  font-size: 0.89em;
+}
+
+.messageSpacing {
+  margin: 0 0 0.8em 0;
+}
+
+.messageTimeContainer {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  right: 0.5em;
+  bottom: 0.3em;
+  gap: 0.2em;
+}
+
+.messageHour {
+  color: var(--attachmentTypeCatalog);
+  font-size: 0.7em;
+  width: max-content;
+}
+
+.messageViewed {
+  color: var(--CheckViewMessage);
+}
+
+.menu {
+  position: absolute;
+  right: 0.1em;
+  top: -0.2em;
+  transition: all 0.15s ease;
+  transform: translateX(2em);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.triangleOuter {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: -1em;
+  top: -0.8em;
+  transform: rotate(-135deg);
+  color: var(--backMessagesOutter);
+}
+.triangleInner {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  left: -1em;
+  top: -0.8em;
+  transform: rotate(-45deg);
+  color: var(--searchChat);
+}
+
+.reactMessage {
+  position: absolute;
+  bottom: -1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--searchChat);
+  width: 2em;
+  height: 1.5em;
+  border-radius: 1em;
+  border: 1px solid #171717;
+}
+
+.reactMessageInner {
+  left: 0.5em;
+}
+
+.reactMessageOuter {
+  right: 0.5em;
+}
+
+.spacingReact {
+  margin: 0 0 1em 0;
+}

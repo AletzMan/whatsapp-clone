@@ -1,0 +1,155 @@
+.navigation {
+  position: absolute;
+  top: -675%;
+  left: 3.6em;
+  z-index: 5;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.optionContainerView {
+  display: flex;
+}
+
+.optionContainerNotView {
+  pointer-events: none;
+  display: none;
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 5em;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.survey:not(.surveyOut) {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    250ms;
+  opacity: 0;
+}
+.contact {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    200ms;
+  opacity: 0;
+}
+.document {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    150ms;
+  opacity: 0;
+}
+.camera {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    100ms;
+  opacity: 0;
+}
+.sticker {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both 50ms;
+  opacity: 0;
+}
+.photoAndVideos {
+  animation: animationButton 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both 0s;
+  opacity: 0;
+}
+
+.surveyOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    250ms;
+}
+.contactOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    200ms;
+}
+.documentOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    150ms;
+}
+.cameraOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    100ms;
+}
+.stickerOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    50ms;
+}
+.photoAndVideosOut {
+  animation: animationButtonOut 0.3s cubic-bezier(0.63, 0.47, 0.18, 1.29) both
+    0s;
+}
+
+@keyframes animationButton {
+  0% {
+    transform: translateY(100px) scale(0);
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    display: flex;
+  }
+}
+
+@keyframes animationButtonOut {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    transform: translateY(100px) scale(0);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.optionButton:hover ~ .optionName {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.optionName {
+  background-color: #e7e7e7;
+  border-radius: 1.5em;
+  padding: 0.3em 1em 0.45em 1em;
+  font-size: 0.85em;
+  width: max-content;
+  color: #000000;
+  transition: all 0.2s ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left center;
+}
+
+.viewMenu {
+  display: flex;
+}
+
+.notViewMenu {
+  display: none;
+}

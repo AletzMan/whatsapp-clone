@@ -1,9 +1,10 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-height: 100vh;
+  max-height: 100%;
   background-color: var(--backgroundColor);
   max-width: 1600px;
   margin: 0 auto;
