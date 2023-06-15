@@ -1,0 +1,22 @@
+.containerMessage {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--mediaDropBorder);
+  padding: 0.97em 0.9em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.containerMessage:hover {
+  background-color: var(--searchChat);
+}
+
+.date {
+  color: var(--messageChatPreview);
+  font-size: 0.75em;
+}
+
+.message {
+  color: var(--messageChatPreview);
+  font-size: 0.9em;
+}

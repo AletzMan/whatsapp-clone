@@ -1,0 +1,138 @@
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.17em;
+  width: 100%;
+  height: calc(100vh - 7.2em);
+  background-color: var(--backgroundColor);
+  background-image: url("../../../../assets/bg.png");
+  background-blend-mode: overlay;
+  padding: 1em 1em 2em 1em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #888;
+}
+
+.section::-webkit-scrollbar {
+  width: 6px; /* Ancho de la scrollbar */
+}
+
+.section::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarThumb);
+}
+.section::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
+
+.footer {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  justify-content: space-around;
+  right: 0;
+  bottom: -0.1em;
+  background-color: var(--searchChat);
+  width: 100%;
+  height: fit-content;
+  z-index: 2;
+}
+
+.sendContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.13em 1em 0.4em 1em;
+  width: 100%;
+  height: 3.6em;
+  background-color: var(--searchChat);
+  z-index: 2;
+}
+
+.emojiContainer {
+  position: absolute;
+  transform: translateY(110px);
+  transition: all 0.3s ease-in-out;
+}
+
+.viewEmojis {
+  transform: translateY(-166px);
+}
+
+.writeContainer {
+  display: flex;
+  border-radius: 0.5em;
+  min-width: 240px;
+  width: 100%;
+  height: auto;
+  max-height: 10em;
+  padding: 0.5em;
+  background-color: var(--activeChat);
+}
+
+.write {
+  background-color: transparent;
+  padding: 0.3em;
+  border: none;
+  width: 100%;
+  outline: none;
+  color: var(--nameChat);
+  font-size: 0.9em;
+  overflow-y: auto;
+  height: auto;
+  max-height: 10em;
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #888;
+}
+.write::-webkit-scrollbar {
+  width: 7px; /* Ancho de la scrollbar */
+}
+
+.write::-webkit-scrollbar-thumb {
+  background-color: var(--mediaDropBorder);
+}
+.write::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
+.write::placeholder {
+  color: var(--avatarBorder);
+  opacity: 0.85;
+  padding: 0 0 0 0.2em;
+}
+
+.emoji,
+.attach,
+.micro,
+.send {
+  width: 26px;
+  height: 26px;
+  color: var(--messageChatPreview);
+}
+.attachButton {
+  margin: 0 0.7em 0 0;
+}
+
+.buttonActive {
+  color: var(--activeTabMark);
+}
+
+.footerButton {
+  display: flex;
+  align-items: center;
+  padding: 0.6em;
+  background-color: transparent;
+  border: none;
+  border-radius: 4em;
+  cursor: pointer;
+}
+.footerButton:hover {
+  background-color: var(--activeChat);
+}
+
+.sendButton {
+  margin: 0 0 0 0.5em;
+}

@@ -1,0 +1,63 @@
+.section {
+  width: 32%;
+  height: 100vh;
+  min-width: 337px;
+  max-width: 480px;
+  overflow-y: hidden;
+  border-right: 1px solid var(--mediaDropBorder);
+}
+
+.optionFilters {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.buttonFilter {
+  border-radius: 3em;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0.3em 0 0 0;
+  justify-self: left;
+  transition: all 0.3s ease;
+}
+
+.buttonFilter:hover:not(.buttonFilterActive) {
+  background-color: #ffffff15;
+}
+
+.buttonFilterActive {
+  background-color: var(--activeTabMark);
+}
+.buttonFilterActive > svg > path {
+  fill: rgb(246, 247, 248);
+}
+.messagesFilter {
+  color: var(--activeTabMark);
+  font-weight: 400;
+  font-size: 0.95em;
+  margin: 2em;
+}
+
+.chatsSection {
+  height: calc(100vh - 7em);
+  padding: 0 0 2em 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #888;
+}
+
+.chatsSection::-webkit-scrollbar {
+  width: 6px; /* Ancho de la scrollbar */
+}
+
+.chatsSection::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarThumb);
+}
+.chatsSection::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de la pista */
+}
